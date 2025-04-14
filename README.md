@@ -1,12 +1,4 @@
-# A basic Rust Nix template
+# A Machine Learning Model for Single Variable Linear Regression Written in Rust
 
-## Set Up
-This template uses `shell.nix` and direnv. Once cloned, you can either
-```
-nix-shell
-```
-or 
-```
-direnv allow
-```
-Then just `cargo init` as normal and get start coding!
+Just a bit of practice. Converted my class lab Python code into Rust.
+Reads in a list of input/output values and attempts to train the model to output a fitting linear regression.
