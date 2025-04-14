@@ -141,7 +141,6 @@ fn gradient_descent(values: Vec<(f64, f64)>, alpha: f64, w: f64, b: f64)
         // Print the cost at intervals 10 times or as many iterations if < 10.
         if i % 1000 == 0 {
             log(format!("\tIteration: {i}\n\t\tCost: {cost}\n\t\tdj_dw: {dj_dw}, dj_db: {dj_db}\n\t\tw: {w}, b: {b}"))?;
-            //println!("Iteration: {i}\n\tCost: {cost}\n\tdj_dw: {dj_dw}, dj_db: {dj_db}\n\tw: {w}, b: {b}");
         }
         // If the cost doesn't change, we're done.
         if cost == cost_prev { break; }
@@ -170,7 +169,6 @@ fn main() {
     let values = read_file("./training_values")
         .expect("Invalid training data!");
     // Calculate the gradient descent.
-    //let alpha = 1.0e-5;
     let mut alpha = 1.0;
     let w_init = 0.0;
     let b_init = 0.0;
@@ -196,7 +194,6 @@ fn main() {
         // Failed. Try again with a smaller alpha.
         log("\tAlpha too large. Trying again with smaller alpha...".into())
             .unwrap_or_else(|e| println!("Log error: {e}"));
-        //println!("Alpha too large. Trying again with smaller alpha...");
         alpha *= 0.1;
     }
 }
